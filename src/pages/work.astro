@@ -1,0 +1,259 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+const projects = [
+  {
+    image: 'work-1.jpg',
+    title: 'Land Clearing & Site Cleanup',
+    description: 'Full land clearing and debris hauling for a waterfront property in Harbor Springs. Brush and debris cleared — site left clean and ready for landscaping.',
+    tags: ['Land Clearing', 'Hauling', 'Site Prep'],
+  },
+  {
+    image: 'work-2.jpg',
+    title: 'Brush Clearing & Hauling',
+    description: 'Residential brush clearing and hauling. Our equipment and dump truck make quick work of overgrown lots, leaving the site cleaned up and ready for the next phase.',
+    tags: ['Brush Clearing', 'Hauling', 'Site Prep'],
+  },
+  {
+    image: 'work-3.jpg',
+    title: 'Gravel Driveway Installation',
+    description: 'New gravel driveway install for a rural Northern Michigan property. Properly graded with good drainage built in from the start.',
+    tags: ['Driveways', 'Grading', 'Gravel'],
+  },
+  {
+    image: 'work-4.jpg',
+    title: 'Boulder Retaining Wall',
+    description: 'Large boulder retaining wall installed alongside a new home build. Natural fieldstone creates a beautiful, permanent solution to a significant grade change.',
+    tags: ['Retaining Wall', 'Boulder Work', 'New Construction'],
+  },
+  {
+    image: 'work-5.jpg',
+    title: 'Equipment Mobilization',
+    description: 'Our excavator loaded and en route to a job site — ready to dig. We mobilize quickly across Northern Michigan to keep your project on schedule.',
+    tags: ['Excavation', 'Equipment'],
+  },
+];
+---
+
+<BaseLayout title="Our Work | Bosker Excavating & Trucking" description="See examples of our excavation, trucking, retaining walls, and site work projects across Northern Michigan.">
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Our Work</h1>
+      <p>A look at recent projects across Harbor Springs, Petoskey, and Northern Michigan.</p>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section">
+    <div class="container">
+      <div class="gallery">
+        {projects.map((project) => (
+          <div class="gallery-card">
+            <div class="gallery-img-wrap">
+              <img
+                src={`${base}images/${project.image}`}
+                alt={project.title}
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery-info">
+              <h2>{project.title}</h2>
+              <p>{project.description}</p>
+              <div class="tags">
+                {project.tags.map(tag => <span class="tag">{tag}</span>)}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="work-cta">
+    <div class="container">
+      <h2>Have a Project in Mind?</h2>
+      <p>Whether it's a small residential job or a large commercial site — we'd love to help. Reach out for a free estimate.</p>
+      <div class="cta-buttons">
+        <a href="tel:+12314993784" class="btn btn-dark">Call (231) 499-3784</a>
+        <a href={`${base}contact/`} class="btn btn-outline-cta">Get a Free Estimate</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: var(--color-dark);
+    color: var(--color-white);
+    text-align: center;
+    padding: 6rem 1.5rem 4rem;
+    border-bottom: 4px solid var(--color-accent);
+  }
+
+  .page-header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .page-header p {
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.8);
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  /* Gallery */
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .gallery-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .gallery-card:nth-child(even) .gallery-img-wrap {
+    order: 2;
+  }
+
+  .gallery-card:nth-child(even) .gallery-info {
+    order: 1;
+  }
+
+  @media (max-width: 768px) {
+    .gallery-card {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .gallery-card:nth-child(even) .gallery-img-wrap,
+    .gallery-card:nth-child(even) .gallery-info {
+      order: unset;
+    }
+  }
+
+  .gallery-img-wrap {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  }
+
+  .gallery-img-wrap img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+  }
+
+  .gallery-img-wrap:hover img {
+    transform: scale(1.03);
+  }
+
+  .gallery-info h2 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--color-accent);
+    padding-left: 1rem;
+  }
+
+  .gallery-info p {
+    color: var(--color-gray-700);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    background: var(--color-dark);
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.3rem 0.85rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* CTA */
+  .work-cta {
+    background: var(--color-accent);
+    padding: 5rem 1.5rem;
+    text-align: center;
+  }
+
+  .work-cta h2 {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+  }
+
+  .work-cta p {
+    font-size: 1.1rem;
+    color: rgba(0,0,0,0.7);
+    margin-bottom: 2rem;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-dark {
+    background: var(--color-dark);
+    color: var(--color-white);
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn-dark:hover {
+    background: #333;
+    transform: translateY(-2px);
+  }
+
+  .btn-outline-cta {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1rem;
+    border: 2px solid var(--color-dark);
+    color: var(--color-dark);
+    background: transparent;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+  }
+
+  .btn-outline-cta:hover {
+    background: var(--color-dark);
+    color: var(--color-white);
+    transform: translateY(-2px);
+  }
+</style>

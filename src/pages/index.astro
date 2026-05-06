@@ -1,0 +1,562 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Bosker Excavating & Trucking | Harbor Springs, MI">
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Harbor Springs, Michigan</p>
+      <h1>Bosker Excavating<br />&amp; Trucking</h1>
+      <p class="hero-tagline">Northern Michigan's Trusted Excavation &amp; Site Work Professionals</p>
+      <div class="hero-buttons">
+        <a href="tel:+12314993784" class="btn btn-primary">Call (231) 499-3784</a>
+        <a href={`${base}contact/`} class="btn btn-outline">Get a Free Estimate</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>&#8595;</span>
+    </div>
+  </section>
+
+  <!-- Quick Contact Bar -->
+  <div class="quick-bar">
+    <div class="container">
+      <div class="quick-bar-items">
+        <a href="tel:+12314993784" class="quick-item">
+          <span class="qi-icon">&#9742;</span>
+          <span>(231) 499-3784</span>
+        </a>
+        <a href="mailto:boskerexcavating@gmail.com" class="quick-item">
+          <span class="qi-icon">&#9993;</span>
+          <span>boskerexcavating@gmail.com</span>
+        </a>
+        <span class="quick-item">
+          <span class="qi-icon">&#9873;</span>
+          <span>Harbor Springs, MI</span>
+        </span>
+        <a href={`${base}contact/`} class="btn btn-primary quick-cta">Free Estimate &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Overview -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">What We Do</h2>
+      <p class="section-subtitle">From raw land to finished site — we have the equipment, experience, and work ethic to get it done right.</p>
+
+      <div class="services-grid">
+        <a href={`${base}services/#excavation`} class="service-card">
+          <div class="service-icon">&#9874;</div>
+          <h3>Excavation</h3>
+          <p>Foundations, basements, ponds, trenching, and general excavation for any scale of project.</p>
+        </a>
+        <a href={`${base}services/#site-prep`} class="service-card">
+          <div class="service-icon">&#9041;</div>
+          <h3>Site Preparation</h3>
+          <p>Land clearing, grubbing, brush removal, and rough grading to prepare your property for construction.</p>
+        </a>
+        <a href={`${base}services/#grading`} class="service-card">
+          <div class="service-icon">&#9951;</div>
+          <h3>Grading &amp; Drainage</h3>
+          <p>Finish grading, French drains, culverts, and stormwater management to protect your property.</p>
+        </a>
+        <a href={`${base}services/#retaining-walls`} class="service-card">
+          <div class="service-icon">&#9776;</div>
+          <h3>Retaining Walls</h3>
+          <p>Beautiful, durable boulder and fieldstone retaining walls built to last in Northern Michigan's terrain.</p>
+        </a>
+        <a href={`${base}services/#trucking`} class="service-card">
+          <div class="service-icon">&#9931;</div>
+          <h3>Trucking &amp; Hauling</h3>
+          <p>Material delivery and removal — gravel, sand, topsoil, fill dirt, and debris hauling.</p>
+        </a>
+        <a href={`${base}services/#septic`} class="service-card">
+          <div class="service-icon">&#8853;</div>
+          <h3>Septic Systems</h3>
+          <p>Septic installation, repair, and replacement meeting all local codes and regulations.</p>
+        </a>
+        <a href={`${base}services/#driveways`} class="service-card">
+          <div class="service-icon">&#9660;</div>
+          <h3>Driveways</h3>
+          <p>Gravel driveway installation, grading, and maintenance for residential and rural properties.</p>
+        </a>
+        <a href={`${base}services/#demolition`} class="service-card">
+          <div class="service-icon">&#9715;</div>
+          <h3>Demolition</h3>
+          <p>Safe, efficient demolition of structures, foundations, concrete, and site obstacles.</p>
+        </a>
+      </div>
+
+      <div class="services-cta">
+        <a href={`${base}services/`} class="btn btn-secondary">View All Services</a>
+        <a href={`${base}contact/`} class="btn btn-primary">Get a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section why-section">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-text">
+          <h2>Why Northern Michigan<br/>Chooses Bosker</h2>
+          <p>We're a local, owner-operated business. When you call Bosker, you get straight talk, fair pricing, and a crew that shows up and gets the job done — no excuses.</p>
+          <div class="why-stats">
+            <div class="stat">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Local &amp; Owner-Operated</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">Free</span>
+              <span class="stat-label">Project Estimates</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">N. MI</span>
+              <span class="stat-label">Serving All of Northern Michigan</span>
+            </div>
+          </div>
+          <ul class="why-list">
+            <li>Local expertise — we know Northern Michigan's soil, slopes, and seasons</li>
+            <li>Reliable scheduling — we show up when we say we will</li>
+            <li>Professional equipment maintained and ready to work</li>
+            <li>Honest, upfront pricing with no hidden fees</li>
+            <li>Experienced with both residential and commercial projects</li>
+          </ul>
+          <a href={`${base}contact/`} class="btn btn-primary">Contact Us Today</a>
+        </div>
+        <div class="why-image">
+          <img src={`${base}images/work-5.jpg`} alt="Bosker Excavating truck and equipment ready to work" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Preview -->
+  <section class="section work-preview">
+    <div class="container">
+      <h2 class="section-title">Recent Projects</h2>
+      <p class="section-subtitle">A look at some of the work we've completed across Northern Michigan.</p>
+      <div class="work-grid">
+        <a href={`${base}work/`} class="work-thumb">
+          <img src={`${base}images/work-4.jpg`} alt="Boulder retaining wall construction" loading="lazy" />
+          <div class="work-overlay"><span>Boulder Retaining Wall</span></div>
+        </a>
+        <a href={`${base}work/`} class="work-thumb">
+          <img src={`${base}images/work-1.jpg`} alt="Land clearing and site cleanup" loading="lazy" />
+          <div class="work-overlay"><span>Land Clearing &amp; Hauling</span></div>
+        </a>
+        <a href={`${base}work/`} class="work-thumb">
+          <img src={`${base}images/work-3.jpg`} alt="Gravel driveway installation" loading="lazy" />
+          <div class="work-overlay"><span>Gravel Driveway</span></div>
+        </a>
+      </div>
+      <div class="services-cta">
+        <a href={`${base}work/`} class="btn btn-secondary">View All Projects &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Call or email for a free, no-obligation estimate. We'll come take a look and give you a straight answer.</p>
+      <div class="cta-buttons">
+        <a href="tel:+12314993784" class="btn btn-primary">Call (231) 499-3784</a>
+        <a href={`${base}contact/`} class="btn btn-outline">Send a Message</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ===== Hero ===== */
+  .hero {
+    position: relative;
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/bosker-excavating/images/work-2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.7) 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem 1.5rem;
+    max-width: 850px;
+  }
+
+  .hero-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    color: var(--color-accent);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.1;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+  }
+
+  .hero-tagline {
+    font-size: 1.25rem;
+    opacity: 0.92;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 2.5rem; }
+    .hero { min-height: 75vh; }
+  }
+
+  /* ===== Quick Bar ===== */
+  .quick-bar {
+    background: var(--color-accent);
+    padding: 0.85rem 0;
+  }
+
+  .quick-bar-items {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .quick-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    font-size: 0.9rem;
+  }
+
+  .qi-icon {
+    font-size: 1.1rem;
+  }
+
+  .quick-cta {
+    margin-left: auto;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    background: var(--color-dark);
+    color: var(--color-white);
+  }
+
+  .quick-cta:hover {
+    background: #333;
+    transform: none;
+  }
+
+  @media (max-width: 768px) {
+    .quick-cta { margin-left: 0; }
+  }
+
+  /* ===== Services Grid ===== */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .service-card {
+    display: block;
+    background: var(--color-gray-100);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    border-bottom: 3px solid transparent;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    border-bottom-color: var(--color-accent);
+    background: var(--color-white);
+  }
+
+  .service-icon {
+    font-size: 2.25rem;
+    margin-bottom: 0.85rem;
+    color: var(--color-dark);
+  }
+
+  .service-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+    color: var(--color-dark);
+    font-weight: 700;
+  }
+
+  .service-card p {
+    color: var(--color-gray-700);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .services-cta {
+    text-align: center;
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ===== Why Section ===== */
+  .why-section {
+    background: var(--color-gray-100);
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  @media (max-width: 900px) {
+    .why-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }
+
+  .why-text h2 {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    color: var(--color-dark);
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+  }
+
+  .why-text > p {
+    color: var(--color-gray-700);
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+  }
+
+  .why-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--color-dark);
+    font-family: var(--font-heading);
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    color: var(--color-gray-700);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+
+  .why-list {
+    margin-bottom: 2rem;
+  }
+
+  .why-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.75rem;
+    position: relative;
+    color: var(--color-gray-700);
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+
+  .why-list li:first-child {
+    border-top: 1px solid var(--color-gray-200);
+  }
+
+  .why-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    background: var(--color-dark);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0.65rem;
+    font-weight: 700;
+  }
+
+  .why-image img {
+    border-radius: 10px;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  }
+
+  /* ===== Work Preview ===== */
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .work-grid { grid-template-columns: 1fr; }
+  }
+
+  .work-thumb {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    display: block;
+    aspect-ratio: 4/3;
+  }
+
+  .work-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+
+  .work-thumb:hover img {
+    transform: scale(1.05);
+  }
+
+  .work-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.25rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .work-thumb:hover .work-overlay {
+    opacity: 1;
+  }
+
+  .work-overlay span {
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 1rem;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  }
+
+  /* ===== CTA Banner ===== */
+  .cta-banner {
+    background: var(--color-accent);
+    color: var(--color-dark);
+    text-align: center;
+    padding: 5rem 1.5rem;
+  }
+
+  .cta-banner h2 {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+  }
+
+  .cta-banner p {
+    font-size: 1.15rem;
+    opacity: 0.85;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-banner .btn-primary {
+    background: var(--color-dark);
+    color: var(--color-white);
+  }
+
+  .cta-banner .btn-primary:hover {
+    background: #333;
+  }
+
+  .cta-banner .btn-outline {
+    border-color: var(--color-dark);
+    color: var(--color-dark);
+  }
+
+  .cta-banner .btn-outline:hover {
+    background: var(--color-dark);
+    color: var(--color-white);
+  }
+</style>

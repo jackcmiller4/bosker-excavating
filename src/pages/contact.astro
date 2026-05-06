@@ -1,0 +1,337 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact | Bosker Excavating & Trucking" description="Get in touch with Bosker Excavating and Trucking for a free estimate on your excavation, trucking, or site work project in Harbor Springs, MI.">
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Ready to get started? Reach out for a free estimate or to discuss your project needs.</p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h2>Get in Touch</h2>
+          <p>We'd love to hear from you. Whether you have a question about our services, need an estimate, or want to discuss an upcoming project — don't hesitate to reach out.</p>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">&#9742;</div>
+            <div>
+              <h3>Phone</h3>
+              <a href="tel:+12314993784">(231) 499-3784</a>
+              <p class="contact-note">Call or text anytime</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">&#9993;</div>
+            <div>
+              <h3>Email</h3>
+              <a href="mailto:boskerexcavating@gmail.com">boskerexcavating@gmail.com</a>
+              <p class="contact-note">We'll get back to you within 24 hours</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">&#9873;</div>
+            <div>
+              <h3>Location</h3>
+              <p>Harbor Springs, MI</p>
+              <p class="contact-note">Serving all of Northern Michigan</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">&#9734;</div>
+            <div>
+              <h3>Follow Us</h3>
+              <a href="https://www.facebook.com/p/Bosker-Excavating-and-Trucking-61572191445824/" target="_blank" rel="noopener noreferrer">Find us on Facebook</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <h2>Send Us a Message</h2>
+          <form class="contact-form" action="https://formsubmit.co/boskerexcavating@gmail.com" method="POST">
+            <!-- FormSubmit configuration -->
+            <input type="hidden" name="_subject" value="New inquiry from Bosker Excavating website" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="true" />
+            <input type="hidden" name="_next" value="https://bosker-excavating.example/contact/?success=1" />
+            <input type="text" name="_honey" style="display:none" />
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="Name" required placeholder="Your full name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="Email" required placeholder="your@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="Phone" placeholder="(xxx) xxx-xxxx" />
+            </div>
+            <div class="form-group">
+              <label for="service">Service Needed</label>
+              <select id="service" name="Service">
+                <option value="">Select a service...</option>
+                <option value="Excavation">Excavation</option>
+                <option value="Site Preparation & Land Clearing">Site Preparation & Land Clearing</option>
+                <option value="Grading & Drainage">Grading & Drainage</option>
+                <option value="Retaining Walls">Retaining Walls</option>
+                <option value="Driveways">Driveways</option>
+                <option value="Trucking & Hauling">Trucking & Hauling</option>
+                <option value="Septic Systems">Septic Systems</option>
+                <option value="Demolition">Demolition</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Project Details</label>
+              <textarea id="message" name="Message" rows="5" required placeholder="Tell us about your project — location, timeline, scope, etc."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          </form>
+          <p class="form-note">For the fastest response, call us directly at <a href="tel:+12314993784">(231) 499-3784</a>.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Area -->
+  <section class="map-section">
+    <div class="container">
+      <h2 class="section-title">Service Area</h2>
+      <p class="section-subtitle">Based in Harbor Springs, we proudly serve clients throughout Northern Michigan.</p>
+      <div class="service-area-list">
+        <div class="area-col">
+          <h3>Primary Service Area</h3>
+          <ul>
+            <li>Harbor Springs</li>
+            <li>Petoskey</li>
+            <li>Bay Harbor</li>
+            <li>Alanson</li>
+          </ul>
+        </div>
+        <div class="area-col">
+          <h3>Extended Area</h3>
+          <ul>
+            <li>Charlevoix</li>
+            <li>Boyne City</li>
+            <li>Pellston</li>
+            <li>Cross Village</li>
+          </ul>
+        </div>
+        <div class="area-col">
+          <h3>Also Serving</h3>
+          <ul>
+            <li>Emmet County</li>
+            <li>Charlevoix County</li>
+            <li>Cheboygan County</li>
+            <li>And surrounding areas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: var(--color-dark);
+    color: var(--color-white);
+    text-align: center;
+    padding: 6rem 1.5rem 4rem;
+    border-bottom: 4px solid var(--color-accent);
+  }
+
+  .page-header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .page-header p {
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.8);
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  /* Contact Grid */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+
+  .contact-info h2,
+  .contact-form-wrapper h2 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+  }
+
+  .contact-info > p {
+    color: var(--color-gray-700);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  /* Contact Cards */
+  .contact-card {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+
+  .contact-card:last-child {
+    border-bottom: none;
+  }
+
+  .contact-card-icon {
+    font-size: 1.75rem;
+    color: var(--color-primary);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 40px;
+    text-align: center;
+  }
+
+  .contact-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--color-dark);
+  }
+
+  .contact-card a {
+    color: var(--color-dark);
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+
+  .contact-card a:hover {
+    color: var(--color-accent-dark);
+  }
+
+  .contact-note {
+    font-size: 0.85rem;
+    color: var(--color-gray-400);
+    margin-top: 0.25rem;
+  }
+
+  /* Form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .form-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-dark);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-gray-200);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    background: var(--color-white);
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(245, 196, 0, 0.2);
+  }
+
+  .btn-full {
+    width: 100%;
+  }
+
+  .form-note {
+    font-size: 0.85rem;
+    color: var(--color-gray-400);
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .form-note a {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  /* Service Area */
+  .map-section {
+    background: var(--color-gray-100);
+    padding: 5rem 0;
+  }
+
+  .service-area-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .area-col h3 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+  }
+
+  .area-col li {
+    padding: 0.35rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+    color: var(--color-gray-700);
+    font-size: 0.95rem;
+  }
+
+  .area-col li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+</style>

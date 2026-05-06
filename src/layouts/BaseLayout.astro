@@ -1,0 +1,89 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Bosker Excavating and Trucking — Professional excavation, grading, trucking, and site work services in Harbor Springs, MI and Northern Michigan." } = Astro.props;
+const currentPath = Astro.url.pathname;
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a href={`${base}`} class="nav-logo">
+          <img src={`${base}images/logo.jpg`} alt="Bosker Excavating and Trucking" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href={`${base}`} class:list={[{ active: currentPath === base || currentPath === base.slice(0, -1) }]}>Home</a>
+          <a href={`${base}services/`} class:list={[{ active: currentPath.includes('services') }]}>Services</a>
+          <a href={`${base}work/`} class:list={[{ active: currentPath.includes('work') }]}>Our Work</a>
+          <a href={`${base}contact/`} class:list={[{ active: currentPath.includes('contact') }]}>Contact</a>
+          <a href={`${base}contact/`} class="btn btn-primary">Free Estimate</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <img src={`${base}images/logo.jpg`} alt="Bosker Excavating and Trucking" class="footer-logo" />
+            <p>Professional excavation and trucking services proudly serving Harbor Springs, Petoskey, and all of Northern Michigan.</p>
+          </div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <p>
+              <a href={`${base}`}>Home</a><br />
+              <a href={`${base}services/`}>Services</a><br />
+              <a href={`${base}work/`}>Our Work</a><br />
+              <a href={`${base}contact/`}>Contact & Free Estimate</a>
+            </p>
+          </div>
+          <div class="footer-col">
+            <h3>Contact Us</h3>
+            <p>
+              <a href="tel:+12314993784">(231) 499-3784</a><br />
+              <a href="mailto:boskerexcavating@gmail.com">boskerexcavating@gmail.com</a><br />
+              Harbor Springs, MI
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} Bosker Excavating and Trucking. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.querySelector('.nav-toggle');
+      const links = document.querySelector('.nav-links');
+      toggle?.addEventListener('click', () => {
+        links?.classList.toggle('open');
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>
